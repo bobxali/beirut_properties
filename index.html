@@ -65,8 +65,8 @@
               <option value="">كل المناطق</option>
               <option value="بيروت">بيروت</option>
               <option value="الضاحية">الضاحية</option>
-              <option value="المتن">المتن</option>
-              <option value="كسروان">كسروان</option>
+              <option value="عرمون">عرمون</option>
+              <option value="بشامون">بشامون</option>
               <option value="عاليه">عاليه</option>
               <option value="الشوف">الشوف</option>
             </select>
@@ -135,12 +135,12 @@
           <p>حلول سكنية مناسبة للعائلات وبأسعار مدروسة.</p>
         </div>
         <div class="area-card" data-reveal>
-          <h3>المتن</h3>
-          <p>موقع استراتيجي يجمع بين الهدوء وقرب العمل.</p>
+          <h3>عرمون</h3>
+          <p>منطقة سكنية قريبة من بيروت وخدمات متكاملة.</p>
         </div>
         <div class="area-card" data-reveal>
-          <h3>كسروان</h3>
-          <p>إطلالات بحرية ومساحات خضراء جذابة.</p>
+          <h3>بشامون</h3>
+          <p>أجواء هادئة وطبيعة خضراء مع سهولة الوصول.</p>
         </div>
       </div>
     </div>
@@ -174,12 +174,12 @@
       <div class="contact-grid">
         <div class="contact-card" data-reveal>
           <h3>هاتف / واتساب</h3>
-          <p>+961 70 000 000</p>
-          <p>+961 1 000 000</p>
+          <p>+961-78971332</p>
+          <a class="btn ghost" href="https://wa.me/96178971332" target="_blank" rel="noopener">راسلنا على واتساب</a>
         </div>
         <div class="contact-card" data-reveal>
           <h3>البريد الإلكتروني</h3>
-          <p>info@beirutproperties.com</p>
+          <p><a href="mailto:bobxali@gmail.com">bobxali@gmail.com</a></p>
         </div>
         <div class="contact-card" data-reveal>
           <h3>ساعات العمل</h3>
@@ -213,5 +213,13 @@
 </footer>
 
 <script src="assets/js/main.js"></script>
+<script>
+(function () {
+  var h = window.location.hash || "";
+  if (/invite_token=|recovery_token=|confirmation_token=/.test(h)) {
+    window.location.replace("/admin/" + h);
+  }
+})();
+</script>
 </body>
 </html>

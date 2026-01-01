@@ -15,5 +15,10 @@
 
 > يمكنك تعديل إعدادات المستودع من `admin/config.yml`.
 
+ملاحظة مهمة (Netlify):
+- من لوحة Netlify: Identity → Emails → Invitation template → Configure
+- ضع المسار: `/_identity/invitation.html`
+- احفظ، ثم احذف المستخدم القديم وادعُه من جديد.
+
 ## الشعار
 الشعار الحالي في `assets/img/logo.jpg`. استبدله بشعارك الأصلي بالاسم نفسه للحفاظ على التصميم.

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Accept Invitation</title>
+  </head>
+  <body>
+    <p>Redirecting you to accept the invitation…</p>
+    <p>
+      If you are not redirected automatically, click:
+      <a href="{{ .SiteURL }}/admin/#invite_token={{ .Token }}">Accept the invite</a>
+    </p>
+    <script>
+      (function () {
+        var target = "{{ .SiteURL }}/admin/#invite_token={{ .Token }}";
+        window.location.replace(target);
+      })();
+    </script>
+  </body>
+</html>
