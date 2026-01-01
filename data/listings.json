@@ -1,94 +1,21 @@
-﻿{
+{
   "listings": [
     {
-      "id": "b01",
-      "title": "شقة حديثة مع شرفة بانورامية",
-      "status": "للبيع",
-      "type": "شقة",
-      "area": "بيروت",
-      "price": 185000,
-      "currency": "USD",
-      "bedrooms": 3,
+      "size": 135,
       "bathrooms": 2,
-      "size": 155,
-      "image": "assets/img/listing-placeholder.svg",
-      "features": ["موقف سيارة", "مفروشة جزئياً", "قريبة من الخدمات"],
-      "featured": true
-    },
-    {
-      "id": "b02",
-      "title": "فيلا مستقلة مع حديقة خاصة",
-      "status": "للبيع",
-      "type": "فيلا",
-      "area": "بشامون",
-      "price": 420000,
+      "price": 165000,
+      "area": "دوحة الحص",
+      "featured": true,
       "currency": "USD",
-      "bedrooms": 4,
-      "bathrooms": 4,
-      "size": 320,
-      "image": "assets/img/listing-placeholder.svg",
-      "features": ["حديقة", "إطلالة بحرية", "مولد خاص"],
-      "featured": true
-    },
-    {
-      "id": "r01",
-      "title": "شقة مفروشة للإيجار الشهري",
-      "status": "للإيجار",
+      "status": "للبيع",
+      "bedrooms": 5,
+      "title": "بالقرب من منزل السفير المصري",
       "type": "شقة",
-      "area": "الضاحية",
-      "price": 1200,
-      "currency": "USD",
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "size": 110,
-      "image": "assets/img/listing-placeholder.svg",
-      "features": ["مولد كهرباء", "مفروشة", "قرب المدارس"],
-      "featured": true
-    },
-    {
-      "id": "r02",
-      "title": "مكتب مجهز في موقع حيوي",
-      "status": "للإيجار",
-      "type": "مكتب",
-      "area": "بيروت",
-      "price": 2500,
-      "currency": "USD",
-      "bedrooms": 0,
-      "bathrooms": 1,
-      "size": 180,
-      "image": "assets/img/listing-placeholder.svg",
-      "features": ["قاعات اجتماعات", "خدمة استقبال", "مواقف خاصة"],
-      "featured": false
-    },
-    {
-      "id": "l01",
-      "title": "أرض استثمارية على طريق رئيسي",
-      "status": "للبيع",
-      "type": "أرض",
-      "area": "عرمون",
-      "price": 780000,
-      "currency": "USD",
-      "bedrooms": 0,
-      "bathrooms": 0,
-      "size": 950,
-      "image": "assets/img/listing-placeholder.svg",
-      "features": ["رخصة بناء", "قريبة من الطريق", "مناسبة للمشاريع"],
-      "featured": false
-    },
-    {
-      "id": "r03",
-      "title": "محل تجاري بواجهة زجاجية",
-      "status": "للإيجار",
-      "type": "محل",
-      "area": "عاليه",
-      "price": 35000000,
-      "currency": "LBP",
-      "bedrooms": 0,
-      "bathrooms": 1,
-      "size": 90,
-      "image": "assets/img/listing-placeholder.svg",
-      "features": ["واجهة رئيسية", "قريب من الأسواق", "سهولة الوصول"],
-      "featured": false
+      "id": "sale-001",
+      "image": "/assets/img/uploads/dawhet-el-hoss.jpg",
+      "features": [
+        "مياه بئر ارتوازي-موقف سيارة خاص-اطلالة"
+      ]
     }
   ]
 }
