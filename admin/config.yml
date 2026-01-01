@@ -19,11 +19,11 @@ collections:
             label: "قائمة العقارات"
             widget: "list"
             fields:
-              - { label: "المعرف", name: "id", widget: "string" }
+              - { label: "ID", name: "id", widget: "string" }
               - { label: "العنوان", name: "title", widget: "string" }
               - { label: "الحالة", name: "status", widget: "select", options: ["للبيع", "للإيجار"] }
               - { label: "النوع", name: "type", widget: "select", options: ["شقة", "فيلا", "مكتب", "أرض", "محل"] }
-              - { label: "المنطقة", name: "area", widget: "select", options: ["بيروت", "الضاحية", "عرمون", "بشامون", "عاليه", "الشوف"] }
+              - { label: "المنطقة", name: "area", widget: "select", options: ["بيروت", "راس بيروت", "الحمرا", "فرن الشباك", "الضاحية", "حارة حريك", "برج البراجنة", "الشويفات", "الحازمية", "دوحة الحص", "خلدة", "عرمون", "بشامون", "عاليه", "الشوف"] }
               - { label: "السعر", name: "price", widget: "number" }
               - { label: "العملة", name: "currency", widget: "select", options: ["USD", "LBP"] }
               - { label: "عدد الغرف", name: "bedrooms", widget: "number", default: 0 }

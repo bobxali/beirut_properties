@@ -1,9 +1,11 @@
 ﻿let listingsCache = [];
 
 function formatPrice(value, currency) {
-  const formatter = new Intl.NumberFormat("ar-LB");
-  const label = currency === "LBP" ? "ل.ل" : "$";
-  return `${formatter.format(value)} ${label}`;
+  const formatter = new Intl.NumberFormat("en-US");
+  if (currency === "LBP") {
+    return `${formatter.format(value)} ل.ل`;
+  }
+  return `${formatter.format(value)}$`;
 }
 
 function renderListing(listing) {
