@@ -1,21 +1,3 @@
-{
-  "listings": [
-    {
-      "size": 135,
-      "bathrooms": 2,
-      "price": 165000,
-      "area": "دوحة الحص",
-      "featured": true,
-      "currency": "USD",
-      "status": "للبيع",
-      "bedrooms": 5,
-      "title": "بالقرب من منزل السفير المصري",
-      "type": "شقة",
-      "id": "sale-001",
-      "image": "/assets/img/uploads/dawhet-el-hoss.jpg",
-      "features": [
-        "مياه بئر ارتوازي-موقف سيارة خاص-اطلالة"
-      ]
-    }
-  ]
+﻿{
+  "listings": []
 }

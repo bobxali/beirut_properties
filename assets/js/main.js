@@ -53,22 +53,27 @@ function formatPrice(value, currency) {
   return `${formatter.format(value)}$`;
 }
 
+const WHATSAPP_NUMBER = "96178971332";
+
 function renderCard(listing) {
   const badgeClass = listing.status === "للبيع" ? "sale" : "rent";
+  const waText = `يوجد فيديو: ${listing.title}`;
+  const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(waText)}`;
   return `
     <article class="listing-card" data-reveal>
       <div class="listing-image">
         <img src="${listing.image || "assets/img/listing-placeholder.svg"}" alt="${listing.title}">
       </div>
       <div class="listing-body">
+        <div class="listing-area">${listing.area}</div>
         <span class="badge ${badgeClass}">${listing.status}</span>
         <h3>${listing.title}</h3>
         <div class="price">${formatPrice(listing.price, listing.currency)}</div>
         <div class="meta">
-          <span>${listing.area}</span>
           <span>${listing.type}</span>
           <span>${listing.size} م²</span>
         </div>
+        <a class="btn ghost whatsapp-btn" href="${waLink}" target="_blank" rel="noopener">واتساب · يوجد فيديو</a>
       </div>
     </article>
   `;

@@ -1,4 +1,5 @@
 ﻿let listingsCache = [];
+const WHATSAPP_NUMBER = "96178971332";
 
 function formatPrice(value, currency) {
   const formatter = new Intl.NumberFormat("en-US");
@@ -11,17 +12,19 @@ function formatPrice(value, currency) {
 function renderListing(listing) {
   const badgeClass = listing.status === "للبيع" ? "sale" : "rent";
   const features = (listing.features || []).slice(0, 3).join(" • ");
+  const waText = `يوجد فيديو: ${listing.title}`;
+  const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(waText)}`;
   return `
     <article class="listing-card" data-reveal>
       <div class="listing-image">
         <img src="${listing.image || "assets/img/listing-placeholder.svg"}" alt="${listing.title}">
       </div>
       <div class="listing-body">
+        <div class="listing-area">${listing.area}</div>
         <span class="badge ${badgeClass}">${listing.status}</span>
         <h3>${listing.title}</h3>
         <div class="price">${formatPrice(listing.price, listing.currency)}</div>
         <div class="meta">
-          <span>${listing.area}</span>
           <span>${listing.type}</span>
           <span>${listing.size} م²</span>
           <span>${listing.bedrooms} غرف</span>
