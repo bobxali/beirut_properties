@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>العقارات | عقارات بيروت وضواحيها</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/img/logo.jpg" alt="عقارات بيروت وضواحيها">
+      <div class="brand-text">
+        <span class="brand-title">عقارات بيروت وضواحيها</span>
+        <span class="brand-subtitle">بيع وإيجار المنازل بكل ثقة</span>
+      </div>
+    </a>
+    <nav class="main-nav" id="main-nav">
+      <a href="index.html">الرئيسية</a>
+      <a href="listings.html" class="active">العقارات</a>
+      <a href="index.html#areas">المناطق</a>
+      <a href="index.html#contact">تواصل معنا</a>
+      <a class="cta-link" href="admin/index.html">لوحة الإدارة</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="فتح القائمة">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="section compact">
+    <div class="container">
+      <div class="section-head">
+        <h2>كل العقارات</h2>
+        <p>فلتر النتائج بسهولة للعثور على العقار المناسب.</p>
+      </div>
+      <div class="filters" data-reveal>
+        <div class="field">
+          <label>الحالة</label>
+          <select id="filter-status">
+            <option value="">الكل</option>
+            <option value="للبيع">للبيع</option>
+            <option value="للإيجار">للإيجار</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>النوع</label>
+          <select id="filter-type">
+            <option value="">الكل</option>
+            <option value="شقة">شقة</option>
+            <option value="فيلا">فيلا</option>
+            <option value="مكتب">مكتب</option>
+            <option value="أرض">أرض</option>
+            <option value="محل">محل</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>المنطقة</label>
+          <select id="filter-area">
+            <option value="">الكل</option>
+            <option value="بيروت">بيروت</option>
+            <option value="الضاحية">الضاحية</option>
+            <option value="المتن">المتن</option>
+            <option value="كسروان">كسروان</option>
+            <option value="عاليه">عاليه</option>
+            <option value="الشوف">الشوف</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>العملة</label>
+          <select id="filter-currency">
+            <option value="">الكل</option>
+            <option value="USD">دولار</option>
+            <option value="LBP">ليرة لبنانية</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>الحد الأدنى</label>
+          <input type="number" id="filter-min" placeholder="0">
+        </div>
+        <div class="field">
+          <label>الحد الأعلى</label>
+          <input type="number" id="filter-max" placeholder="999999">
+        </div>
+        <div class="field search-field">
+          <label>بحث بالعنوان</label>
+          <input type="text" id="filter-query" placeholder="مثلاً شقة حديثة">
+        </div>
+        <button class="btn primary" id="apply-filters">تصفية</button>
+      </div>
+
+      <div id="listings-grid" class="listing-grid"></div>
+      <p id="empty-state" class="empty">لا توجد نتائج مطابقة حالياً.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <h4>عقارات بيروت وضواحيها</h4>
+      <p>نقدّم حلولاً متكاملة للبيع والإيجار في لبنان.</p>
+    </div>
+    <div>
+      <h4>روابط سريعة</h4>
+      <a href="listings.html">العقارات</a>
+      <a href="index.html#areas">المناطق</a>
+      <a href="index.html#contact">تواصل معنا</a>
+    </div>
+    <div>
+      <h4>لوحة الإدارة</h4>
+      <a href="admin/index.html">إدارة العقارات</a>
+      <p class="note">يمكنك إضافة وتعديل العقارات مباشرة.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">جميع الحقوق محفوظة © 2025</div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/listings.js"></script>
+</body>
+</html>

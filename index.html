@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عقارات بيروت وضواحيها</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/img/logo.jpg" alt="عقارات بيروت وضواحيها">
+      <div class="brand-text">
+        <span class="brand-title">عقارات بيروت وضواحيها</span>
+        <span class="brand-subtitle">بيع وإيجار المنازل بكل ثقة</span>
+      </div>
+    </a>
+    <nav class="main-nav" id="main-nav">
+      <a href="index.html" class="active">الرئيسية</a>
+      <a href="listings.html">العقارات</a>
+      <a href="#areas">المناطق</a>
+      <a href="#contact">تواصل معنا</a>
+      <a class="cta-link" href="admin/index.html">لوحة الإدارة</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="فتح القائمة">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy" data-reveal>
+        <p class="eyebrow">شركة محلية موثوقة في بيروت وضواحيها</p>
+        <h1>منزل أحلامك أقرب مما تتوقع</h1>
+        <p class="lead">نساعدك في العثور على أفضل فرص البيع أو الإيجار بسرعة وشفافية مع دعم كامل حتى توقيع العقد.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="listings.html">تصفّح العقارات</a>
+          <a class="btn ghost" href="#contact">احجز استشارة</a>
+        </div>
+        <div class="hero-metrics">
+          <div>
+            <strong>+320</strong>
+            <span>عقار متاح</span>
+          </div>
+          <div>
+            <strong>+48</strong>
+            <span>عملية بيع ناجحة شهرياً</span>
+          </div>
+          <div>
+            <strong>24/7</strong>
+            <span>متابعة مع العملاء</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-card" data-reveal>
+        <h3>ابدأ البحث الآن</h3>
+        <p>اختر نوع العقار والمنطقة لتحصل على النتائج المناسبة خلال ثوانٍ.</p>
+        <form id="quick-search" class="search-grid">
+          <div class="field">
+            <label>المنطقة</label>
+            <select name="area">
+              <option value="">كل المناطق</option>
+              <option value="بيروت">بيروت</option>
+              <option value="الضاحية">الضاحية</option>
+              <option value="المتن">المتن</option>
+              <option value="كسروان">كسروان</option>
+              <option value="عاليه">عاليه</option>
+              <option value="الشوف">الشوف</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>النوع</label>
+            <select name="type">
+              <option value="">كل الأنواع</option>
+              <option value="شقة">شقة</option>
+              <option value="فيلا">فيلا</option>
+              <option value="مكتب">مكتب</option>
+              <option value="أرض">أرض</option>
+              <option value="محل">محل</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>الحالة</label>
+            <select name="status">
+              <option value="">بيع أو إيجار</option>
+              <option value="للبيع">للبيع</option>
+              <option value="للإيجار">للإيجار</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>الميزانية</label>
+            <select name="budget">
+              <option value="">أي ميزانية</option>
+              <option value="0-1000">حتى 1,000$</option>
+              <option value="1000-2000">1,000$ - 2,000$</option>
+              <option value="2000-4000">2,000$ - 4,000$</option>
+              <option value="4000-999999">أعلى من 4,000$</option>
+            </select>
+          </div>
+          <button type="submit" class="btn primary full">بحث سريع</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>عقارات مميزة</h2>
+        <p>اختياراتنا لهذا الأسبوع في بيروت وضواحيها.</p>
+      </div>
+      <div id="featured-listings" class="listing-grid"></div>
+      <div class="section-footer">
+        <a class="btn ghost" href="listings.html">عرض كل العقارات</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section muted" id="areas">
+    <div class="container">
+      <div class="section-head">
+        <h2>مناطق نغطيها</h2>
+        <p>شبكتنا تشمل أبرز الأحياء والمناطق الحيوية.</p>
+      </div>
+      <div class="area-grid">
+        <div class="area-card" data-reveal>
+          <h3>بيروت</h3>
+          <p>شقق حديثة ومنازل فاخرة بالقرب من الخدمات الأساسية.</p>
+        </div>
+        <div class="area-card" data-reveal>
+          <h3>الضاحية</h3>
+          <p>حلول سكنية مناسبة للعائلات وبأسعار مدروسة.</p>
+        </div>
+        <div class="area-card" data-reveal>
+          <h3>المتن</h3>
+          <p>موقع استراتيجي يجمع بين الهدوء وقرب العمل.</p>
+        </div>
+        <div class="area-card" data-reveal>
+          <h3>كسروان</h3>
+          <p>إطلالات بحرية ومساحات خضراء جذابة.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div class="panel" data-reveal>
+        <h2>لماذا تختارنا؟</h2>
+        <ul class="checklist">
+          <li>خبرة محلية في السوق العقاري اللبناني.</li>
+          <li>خدمة عملاء ودعم قانوني حتى إتمام الصفقة.</li>
+          <li>صور وفيديوهات واقعية ومعاينات ميدانية.</li>
+          <li>خيارات بيع وإيجار تناسب كل الميزانيات.</li>
+        </ul>
+      </div>
+      <div class="panel highlight" data-reveal>
+        <h3>احصل على تقييم مجاني</h3>
+        <p>دع فريقنا يقيّم عقارك ويقترح أفضل سعر بيع أو إيجار.</p>
+        <a class="btn primary" href="#contact">اطلب التقييم</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-head">
+        <h2>تواصل معنا</h2>
+        <p>نحن جاهزون للإجابة على كل استفساراتك.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card" data-reveal>
+          <h3>هاتف / واتساب</h3>
+          <p>+961 70 000 000</p>
+          <p>+961 1 000 000</p>
+        </div>
+        <div class="contact-card" data-reveal>
+          <h3>البريد الإلكتروني</h3>
+          <p>info@beirutproperties.com</p>
+        </div>
+        <div class="contact-card" data-reveal>
+          <h3>ساعات العمل</h3>
+          <p>الاثنين - السبت: 9 صباحاً - 7 مساءً</p>
+          <p>الأحد: حسب المواعيد</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <h4>عقارات بيروت وضواحيها</h4>
+      <p>نقدّم حلولاً متكاملة للبيع والإيجار في لبنان.</p>
+    </div>
+    <div>
+      <h4>روابط سريعة</h4>
+      <a href="listings.html">العقارات</a>
+      <a href="#areas">المناطق</a>
+      <a href="#contact">تواصل معنا</a>
+    </div>
+    <div>
+      <h4>لوحة الإدارة</h4>
+      <a href="admin/index.html">إدارة العقارات</a>
+      <p class="note">يمكنك إضافة وتعديل العقارات مباشرة.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">جميع الحقوق محفوظة © 2025</div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

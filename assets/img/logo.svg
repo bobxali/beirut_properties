@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Beirut Properties">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#1f6f4a"/>
+      <stop offset="1" stop-color="#2b8a5f"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#b0302f"/>
+      <stop offset="1" stop-color="#9d2524"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="240" rx="32" fill="#f4efe6"/>
+  <path d="M40 130 L120 70 L200 130 V200 H40 Z" fill="url(#g1)"/>
+  <path d="M120 70 L200 130 V200 H120 Z" fill="url(#g2)"/>
+  <path d="M120 110 C108 120 98 134 92 150 C88 160 88 174 92 186 L120 190 L148 186 C152 174 152 160 148 150 C142 134 132 120 120 110 Z" fill="#1f6f4a" stroke="#ffffff" stroke-width="6"/>
+  <path d="M100 150 H140" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+  <path d="M96 165 H144" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+  <path d="M92 180 H148" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+</svg>
