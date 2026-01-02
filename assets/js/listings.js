@@ -1,5 +1,4 @@
 ﻿let listingsCache = [];
-const WHATSAPP_NUMBER = "96178971332";
 
 function formatPrice(value, currency) {
   const formatter = new Intl.NumberFormat("en-US");
@@ -12,8 +11,9 @@ function formatPrice(value, currency) {
 function renderListing(listing) {
   const badgeClass = listing.status === "للبيع" ? "sale" : "rent";
   const features = (listing.features || []).slice(0, 3).join(" • ");
+  const whatsappNumber = window.WHATSAPP_NUMBER || "96178971332";
   const waText = `يوجد فيديو: ${listing.title}`;
-  const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(waText)}`;
+  const waLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(waText)}`;
   return `
     <article class="listing-card" data-reveal>
       <div class="listing-image">
