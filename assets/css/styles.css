@@ -278,8 +278,9 @@ select {
 
 .listing-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
+  align-items: stretch;
 }
 
 .listing-card {
@@ -289,6 +290,7 @@ select {
   box-shadow: 0 14px 30px var(--shadow);
   display: flex;
   flex-direction: column;
+  height: 100%;
   transition: transform 0.2s ease;
 }
 
@@ -297,27 +299,25 @@ select {
 }
 
 .listing-image {
-  height: 170px;
+  aspect-ratio: 16 / 9;
   background: linear-gradient(130deg, rgba(31, 111, 74, 0.15), rgba(176, 48, 47, 0.15));
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px;
 }
 
 .listing-image img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  border-radius: 12px;
-  background: #ffffff;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  object-fit: cover;
 }
 
 .listing-body {
   padding: 16px;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 10px;
+  flex: 1;
 }
 
 .listing-area {
@@ -357,6 +357,10 @@ select {
   font-size: 0.85rem;
   color: #5d5d5d;
   flex-wrap: wrap;
+}
+
+.whatsapp-btn {
+  margin-top: auto;
 }
 
 .section-footer {
@@ -515,5 +519,9 @@ select {
 
   .filters .search-field {
     grid-column: span 1;
+  }
+
+  .listing-grid {
+    grid-template-columns: 1fr;
   }
 }
