@@ -1,4 +1,4 @@
-{
+﻿{
   "listings": [
     {
       "security": true,
@@ -26,7 +26,11 @@
       "parking": true,
       "type": "شقة",
       "id": "sale-001",
-      "image": "/assets/img/uploads/111.jpg",
+      "image": "assets/img/uploads/d001.jpg",
+      "images": [
+        "assets/img/uploads/d001.jpg",
+        "assets/img/uploads/d002.jpg"
+      ],
       "features": []
     },
     {
@@ -49,7 +53,11 @@
       "title": "شقة مفروشة و واسعة ومميزة للايجار في منطقة الحازمية",
       "type": "شقة",
       "id": "sale-002",
-      "image": "/assets/img/uploads/508931043_2553935941619940_1417007568431777062_n.jpg",
+      "image": "assets/img/uploads/sale-hazmieh1.jpg",
+      "images": [
+        "assets/img/uploads/sale-hazmieh1.jpg",
+        "assets/img/uploads/sale-hazmieh2.jpg"
+      ],
       "features": []
     },
     {
@@ -81,10 +89,38 @@
       "parking": true,
       "type": "شقة",
       "id": "sale-003",
-      "image": "/assets/img/uploads/500122905_2533884486958419_577778065690356359_n.jpg",
+      "image": "assets/img/uploads/500122905_2533884486958419_577778065690356359_n.jpg",
       "storage": false,
       "features": [
         "● غرفة صانعة ● موزّع ● شرفات مزججة ● ديكورات مع انارة ● كل طابق شقة ●"
+      ]
+    },
+    {
+      "id": "ha001",
+      "title": "شقة مفروشة منطقة حي الامريكان (قرب حاجز الجيش - اطراف الامريكان)",
+      "status": "للبيع",
+      "type": "شقة",
+      "area": "حي الامريكان",
+      "price": 230000,
+      "currency": "USD",
+      "size": 200,
+      "floor": 3,
+      "balconies": 2,
+      "bedrooms": 7,
+      "bathrooms": 4,
+      "building_condition": "جيد",
+      "legal_status": "سند أخضر",
+      "water_source": "مياه دولة",
+      "parking": true,
+      "elevator": true,
+      "featured": false,
+      "image": "assets/img/uploads/ha001.jpg",
+      "images": [
+        "assets/img/uploads/ha001.jpg"
+      ],
+      "features": [
+        "قرب حاجز الجيش",
+        "اطراف الامريكان"
       ]
     }
   ]
