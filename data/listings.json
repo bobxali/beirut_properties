@@ -26,7 +26,6 @@
       "parking": true,
       "type": "شقة",
       "id": "d001",
-      "image": "assets/img/uploads/d001.jpg",
       "images": [
         "assets/img/uploads/d001-1.webp",
         "assets/img/uploads/d001-2.webp",
@@ -58,7 +57,6 @@
       "title": "شقة مفروشة و واسعة ومميزة للايجار في منطقة الحازمية",
       "type": "شقة",
       "id": "hazmieh001",
-      "image": "assets/img/uploads/sale-hazmieh1.jpg",
       "images": [
         "assets/img/uploads/hazmieh001-1.webp",
         "assets/img/uploads/hazmieh001-2.webp"
@@ -94,7 +92,6 @@
       "parking": true,
       "elevator": true,
       "featured": false,
-      "image": "assets/img/uploads/ha001.jpg",
       "images": [
         "assets/img/uploads/hayamarken001-1.webp"
       ],
