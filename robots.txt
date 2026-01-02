@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://beirutsuburbs.netlify.app/sitemap.xml
