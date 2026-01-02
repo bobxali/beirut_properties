@@ -51,6 +51,41 @@
       "id": "sale-002",
       "image": "/assets/img/uploads/508931043_2553935941619940_1417007568431777062_n.jpg",
       "features": []
+    },
+    {
+      "security": true,
+      "size": 200,
+      "solar": false,
+      "ac": true,
+      "water_source": "مياه دولة",
+      "electricity_state": true,
+      "bathrooms": 3,
+      "price": 230000,
+      "water_state": true,
+      "area": "الضاحية",
+      "featured": true,
+      "elevator": true,
+      "cameras": true,
+      "building_condition": "جيد",
+      "currency": "USD",
+      "heating": false,
+      "status": "للبيع",
+      "generator": true,
+      "view_type": "داخلية",
+      "sea_view": false,
+      "water_well": false,
+      "mountain_view": false,
+      "bedrooms": 7,
+      "legal_status": "سند أخضر",
+      "title": "للبيع شقة مع العفش منطقة  حي الامريكان (اطراف الامريكان - قرب حاجز الجيش)",
+      "parking": true,
+      "type": "شقة",
+      "id": "sale-003",
+      "image": "/assets/img/uploads/500122905_2533884486958419_577778065690356359_n.jpg",
+      "storage": false,
+      "features": [
+        "● غرفة صانعة ● موزّع ● شرفات مزججة ● ديكورات مع انارة ● كل طابق شقة ●"
+      ]
     }
   ]
 }
