@@ -1,24 +1,27 @@
-﻿# عقارات بيروت وضواحيها
+# Beirut & Suburbs Properties
 
-موقع عقارات عربي بسيط مع صفحة للعقارات ولوحة إدارة مجانية لإضافة وتعديل القوائم.
+Static real-estate website (HTML/CSS/JS) with listings loaded from `data/listings.json` and images stored in `assets/img/`.
 
-## تشغيل محلي
-- افتح `index.html` مباشرة في المتصفح.
-- صفحة العقارات في `listings.html`.
+## Local preview
+- Open `index.html` directly for a quick look.
+- For JSON loading, use a simple local server:
+  - `python -m http.server 8000`
+  - Then open `http://localhost:8000/`
 
-## لوحة الإدارة (مجانية)
-المشروع يستخدم Decap CMS. لتفعيلها:
-1. ارفع المشروع على GitHub.
-2. اربط المستودع بـ Netlify (خطة مجانية).
-3. من لوحة Netlify فعّل "Git Gateway" و"Identity".
-4. افتح `admin/index.html` وسجّل الدخول.
+## GitHub Pages deploy
+1. GitHub repo → **Settings** → **Pages**
+2. **Source:** Deploy from a branch
+3. **Branch:** `main`
+4. **Folder:** `/ (root)`
+5. Save
 
-> يمكنك تعديل إعدادات المستودع من `admin/config.yml`.
+Your live site URL:
+`https://bobxali.github.io/beirut_properties/`
 
-ملاحظة مهمة (Netlify):
-- من لوحة Netlify: Identity → Emails → Invitation template → Configure
-- ضع المسار: `/_identity/invitation.html`
-- احفظ، ثم احذف المستخدم القديم وادعُه من جديد.
+## Listings data
+- File: `data/listings.json`
+- Images: `assets/img/` or `assets/img/uploads/`
+- Each listing can include up to 3 images (by referencing them in the JSON).
 
-## الشعار
-الشعار الحالي في `assets/img/logo.jpg`. استبدله بشعارك الأصلي بالاسم نفسه للحفاظ على التصميم.
+## Logo
+Replace `assets/img/logo.jpg` with your logo (same filename).
