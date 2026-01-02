@@ -1,3 +1,21 @@
-﻿{
-  "listings": []
+{
+  "listings": [
+    {
+      "size": 134,
+      "bathrooms": 2,
+      "price": 165000,
+      "area": "دوحة الحص",
+      "featured": true,
+      "currency": "USD",
+      "status": "للبيع",
+      "bedrooms": 5,
+      "title": "للبيع شقة منطقة  دوحة الحص (قرب منزل السفير المصري) بناء حديث واطلالة خلابة",
+      "type": "شقة",
+      "id": "sale-001",
+      "image": "/assets/img/uploads/dawhet el hoss.jpg",
+      "features": [
+        "مياه بئر ارتوازي- موقف سيارة خاص-اطلالة-بحرية-جبلية"
+      ]
+    }
+  ]
 }
