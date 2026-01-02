@@ -30,6 +30,7 @@ function renderListing(listing) {
           <span>${listing.bedrooms} غرف</span>
         </div>
         <div class="meta">${features}</div>
+        <a class="btn ghost whatsapp-btn" href="${waLink}" target="_blank" rel="noopener">واتساب · يوجد فيديو</a>
       </div>
     </article>
   `;
