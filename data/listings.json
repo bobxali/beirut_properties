@@ -5,7 +5,7 @@
       "bathrooms": 2,
       "price": 165000,
       "area": "دوحة الحص",
-      "featured": false,
+      "featured": true,
       "currency": "USD",
       "status": "للبيع",
       "bedrooms": 5,
