@@ -1,38 +1,56 @@
 {
   "listings": [
     {
+      "security": true,
       "size": 134,
+      "ac": true,
+      "water_source": "بئر",
+      "electricity_state": true,
       "bathrooms": 2,
       "price": 165000,
       "area": "دوحة الحص",
       "featured": true,
+      "elevator": true,
+      "cameras": true,
+      "building_condition": "جديد",
       "currency": "USD",
       "status": "للبيع",
+      "generator": true,
+      "view_type": "بحر",
+      "sea_view": true,
+      "water_well": true,
+      "mountain_view": true,
       "bedrooms": 5,
+      "legal_status": "سند أخضر",
       "title": "للبيع شقة منطقة  دوحة الحص (قرب منزل السفير المصري) بناء حديث واطلالة خلابة",
+      "parking": true,
       "type": "شقة",
       "id": "sale-001",
       "image": "/assets/img/uploads/dawhet el hoss.jpg",
-      "features": [
-        "مياه بئر ارتوازي- موقف سيارة خاص-اطلالة-بحرية-جبلية"
-      ]
+      "features": []
     },
     {
+      "security": true,
       "size": 450,
+      "ac": true,
+      "water_source": "بئر",
       "bathrooms": 4,
       "price": 2000,
       "area": "الحازمية",
       "featured": true,
+      "cameras": true,
+      "building_condition": "جيد",
       "currency": "USD",
+      "heating": true,
       "status": "للإيجار",
+      "view_type": "شارع",
       "bedrooms": 9,
+      "legal_status": "أخرى",
       "title": "شقة مفروشة و واسعة ومميزة للايجار في منطقة الحازمية",
       "type": "شقة",
       "id": "sale-002",
       "image": "/assets/img/uploads/15617081-400x300.jpeg",
-      "features": [
-        "حالة البناء قديم 🏢 .موقف سيارة مشترك 🚗 .مياه حلوة 🚿 .المصعد ٢٤/٢٤"
-      ]
+      "features": []
     }
   ]
 }
