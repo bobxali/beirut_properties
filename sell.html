@@ -21,7 +21,6 @@
       <a href="listings.html">العقارات</a>
       <a href="sell.html" class="active">سجّل عقارك</a>
       <a href="buy.html">اطلب عقار</a>
-      <a class="cta-link" href="admin/index.html">لوحة الإدارة</a>
     </nav>
     <button class="nav-toggle" id="nav-toggle" aria-label="فتح القائمة">
       <span></span><span></span><span></span>
@@ -36,12 +35,8 @@
         <h2>سجّل عقارك للبيع أو للإيجار</h2>
         <p>املأ البيانات وسنتواصل معك بأسرع وقت.</p>
       </div>
-      <form name="owner-lead" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field" class="panel stack">
-        <input type="hidden" name="form-name" value="owner-lead">
+      <form name="owner-lead" method="GET" action="thank-you.html" class="panel stack">
         <input type="hidden" name="source" value="home">
-        <p class="hidden">
-          <label>لا تملأ هذا الحقل: <input name="bot-field"></label>
-        </p>
         <label>الاسم الكامل</label>
         <input type="text" name="name" required>
         <label>رقم الهاتف</label>
@@ -84,11 +79,6 @@
       <h4>روابط سريعة</h4>
       <a href="listings.html">العقارات</a>
       <a href="buy.html">اطلب عقار</a>
-    </div>
-    <div>
-      <h4>لوحة الإدارة</h4>
-      <a href="admin/index.html">إدارة العقارات</a>
-      <p class="note">يمكنك إضافة وتعديل العقارات مباشرة.</p>
     </div>
   </div>
   <div class="footer-bottom">جميع الحقوق محفوظة © 2025</div>

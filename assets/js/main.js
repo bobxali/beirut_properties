@@ -35,10 +35,12 @@ async function loadFeaturedListings() {
   const container = document.getElementById("featured-listings");
   if (!container) return;
   try {
-    const response = await fetch("data/listings.json");
-    const data = await response.json();
-    const listings = (data.listings || []).filter(item => item.featured);
-    const display = listings.length ? listings.slice(0, 3) : (data.listings || []).slice(0, 3);
+    if (typeof window.getListings !== "function") {
+      throw new Error("getListings is not available");
+    }
+    const allListings = await window.getListings();
+    const listings = allListings.filter(item => item.featured);
+    const display = listings.length ? listings.slice(0, 3) : allListings.slice(0, 3);
     container.innerHTML = display.map(renderCard).join("");
   } catch (err) {
     container.innerHTML = "<p class=\"empty\" style=\"display:block\">تعذّر تحميل العقارات حالياً.</p>";

@@ -115,9 +115,10 @@ function readQueryParams() {
 
 async function initListings() {
   try {
-    const response = await fetch("data/listings.json");
-    const data = await response.json();
-    listingsCache = data.listings || [];
+    if (typeof window.getListings !== "function") {
+      throw new Error("getListings is not available");
+    }
+    listingsCache = await window.getListings();
     readQueryParams();
     applyFilters();
   } catch (err) {
