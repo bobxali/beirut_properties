@@ -1,4 +1,27 @@
 ﻿let listingsCache = [];
+const AMENITY_LABELS = [
+  ["water_state", "مياه دولة"],
+  ["water_well", "بئر ارتوازي"],
+  ["electricity_state", "كهرباء دولة"],
+  ["generator", "مولد"],
+  ["solar", "طاقة شمسية"],
+  ["elevator", "مصعد"],
+  ["parking", "موقف سيارة"],
+  ["storage", "مستودع"],
+  ["sea_view", "إطلالة بحر"],
+  ["mountain_view", "إطلالة جبل"],
+  ["security", "حراسة"],
+  ["cameras", "كاميرات"],
+  ["ac", "تكييف"],
+  ["heating", "تدفئة"]
+];
+
+function getListingFeatures(listing) {
+  const base = Array.isArray(listing.features) ? listing.features : [];
+  const amenities = AMENITY_LABELS.filter(([key]) => Boolean(listing[key]))
+    .map(([, label]) => label);
+  return amenities.concat(base);
+}
 
 function formatPrice(value, currency) {
   const formatter = new Intl.NumberFormat("en-US");
@@ -10,7 +33,7 @@ function formatPrice(value, currency) {
 
 function renderListing(listing) {
   const badgeClass = listing.status === "للبيع" ? "sale" : "rent";
-  const features = (listing.features || []).slice(0, 3).join(" • ");
+  const features = getListingFeatures(listing).slice(0, 3).join(" • ");
   const whatsappNumber = window.WHATSAPP_NUMBER || "96178971332";
   const waText = `يوجد فيديو: ${listing.title}`;
   const waLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(waText)}`;

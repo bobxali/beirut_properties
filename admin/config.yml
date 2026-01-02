@@ -30,5 +30,24 @@ collections:
               - { label: "عدد الحمامات", name: "bathrooms", widget: "number", default: 0 }
               - { label: "المساحة (م²)", name: "size", widget: "number" }
               - { label: "الصورة", name: "image", widget: "image", required: false }
+              - { label: "مياه دولة", name: "water_state", widget: "boolean", default: false, required: false }
+              - { label: "بئر ارتوازي", name: "water_well", widget: "boolean", default: false, required: false }
+              - { label: "كهرباء دولة", name: "electricity_state", widget: "boolean", default: false, required: false }
+              - { label: "مولد", name: "generator", widget: "boolean", default: false, required: false }
+              - { label: "طاقة شمسية", name: "solar", widget: "boolean", default: false, required: false }
+              - { label: "مصعد", name: "elevator", widget: "boolean", default: false, required: false }
+              - { label: "موقف سيارة", name: "parking", widget: "boolean", default: false, required: false }
+              - { label: "مستودع", name: "storage", widget: "boolean", default: false, required: false }
+              - { label: "إطلالة بحر", name: "sea_view", widget: "boolean", default: false, required: false }
+              - { label: "إطلالة جبل", name: "mountain_view", widget: "boolean", default: false, required: false }
+              - { label: "حراسة", name: "security", widget: "boolean", default: false, required: false }
+              - { label: "كاميرات", name: "cameras", widget: "boolean", default: false, required: false }
+              - { label: "تكييف", name: "ac", widget: "boolean", default: false, required: false }
+              - { label: "تدفئة", name: "heating", widget: "boolean", default: false, required: false }
+              - { label: "مصدر المياه", name: "water_source", widget: "select", options: ["مياه دولة", "بئر", "اشتراك", "لا يوجد"] }
+              - { label: "نوع الإطلالة", name: "view_type", widget: "select", options: ["بحر", "جبل", "بانورامية", "شارع", "داخلية"] }
+              - { label: "حالة البناء", name: "building_condition", widget: "select", options: ["جديد", "مجدد", "جيد", "بحاجة ترميم"] }
+              - { label: "الوضع القانوني", name: "legal_status", widget: "select", options: ["سند أخضر", "إفادة عقارية", "جمعية", "أخرى"] }
+
               - { label: "ميزات", name: "features", widget: "list", required: false }
               - { label: "مميز", name: "featured", widget: "boolean", default: false }

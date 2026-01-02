@@ -299,7 +299,7 @@ select {
 }
 
 .listing-image {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 4 / 3;
   background: linear-gradient(130deg, rgba(31, 111, 74, 0.15), rgba(176, 48, 47, 0.15));
   display: flex;
   align-items: center;
@@ -310,6 +310,7 @@ select {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .listing-body {
