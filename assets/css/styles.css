@@ -504,6 +504,35 @@ select {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
 }
 
+form.panel label,
+form.panel input,
+form.panel select,
+form.panel textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form.panel label {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+form.panel input,
+form.panel select,
+form.panel textarea {
+  margin-top: 6px;
+  margin-bottom: 14px;
+}
+
+form.panel textarea {
+  min-height: 110px;
+}
+
+form.panel .actions {
+  margin-top: 6px;
+}
+
 .panel.highlight {
   background: linear-gradient(135deg, rgba(31, 111, 74, 0.12), rgba(176, 48, 47, 0.12));
 }
