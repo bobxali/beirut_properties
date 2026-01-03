@@ -25,11 +25,11 @@
       "title": "للبيع شقة منطقة  دوحة الحص (قرب منزل السفير المصري) بناء حديث واطلالة خلابة",
       "parking": true,
       "type": "شقة",
-      "id": "d001",
+      "id": "listing-1767408570453",
       "images": [
-        "assets/img/uploads/d001-1.webp",
-        "assets/img/uploads/d001-2.webp",
-        "assets/img/uploads/d001-3.webp"
+        "assets/img/uploads/listing-1767408570453-1.webp",
+        "assets/img/uploads/listing-1767408570453-2.webp",
+        "assets/img/uploads/listing-1767408570453-3.webp"
       ],
       "features": [],
       "solar": false,
@@ -196,7 +196,6 @@
       "size": 175,
       "bedrooms": 7,
       "bathrooms": 2,
-      "floor": 0,
       "balconies": 1,
       "water_source": "بئر",
       "building_condition": "جديد",
