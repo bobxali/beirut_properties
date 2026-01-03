@@ -133,10 +133,11 @@
   function renderCard(listing) {
     const badgeClass = listing.status === "للبيع" ? "sale" : "rent";
     const details = getListingDetails(listing);
-    const extras = getListingExtras(listing);
+    const extras = getListingFeatures(listing);
+    const typeLabel = listing.type ? `النوع: ${listing.type}` : "";
     const waText = `يوجد فيديو: ${listing.title}`;
     const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(waText)}`;
-    const extraMeta = extras.length ? `<div class=\"meta\">${extras.join(" • ")}</div>` : "";
+    const extraMeta = extras.length ? `<div class=\"meta\">الإضافات: ${extras.join(" • ")}</div>` : "";
     return `
       <article class="listing-card" data-reveal>
         <div class="listing-image">
@@ -148,6 +149,7 @@
           <h3>${listing.title}</h3>
           <div class="price">${formatPrice(listing.price, listing.currency)}</div>
           <div class="meta">${details.join(" • ")}</div>
+          ${typeLabel ? `<div class=\"meta\">${typeLabel}</div>` : ""}
           ${extraMeta}
           <a class="btn ghost whatsapp-btn" href="${waLink}" target="_blank" rel="noopener">واتساب · يوجد فيديو</a>
         </div>
