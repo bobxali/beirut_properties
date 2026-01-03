@@ -111,6 +111,10 @@
       const listings = allListings.filter(item => item.featured);
       const display = listings.length ? listings.slice(0, 3) : allListings.slice(0, 3);
       container.innerHTML = display.map(renderCard).join("");
+      const items = Array.from(container.querySelectorAll("[data-reveal]"));
+      items.forEach((item, index) => {
+        setTimeout(() => item.classList.add("revealed"), 80 + index * 80);
+      });
     } catch (err) {
       container.innerHTML = "<p class=\"empty\" style=\"display:block\">تعذّر تحميل العقارات حالياً.</p>";
     }
