@@ -1,5 +1,6 @@
-﻿(() => {
+(() => {
   let listingsCache = [];
+  let currentListings = [];
   const AMENITY_LABELS = [
     ["water_state", "مياه دولة"],
     ["water_well", "بئر ارتوازي"],
@@ -22,6 +23,16 @@
       return listing.images[0];
     }
     return listing.image || "assets/img/listing-placeholder.svg";
+  }
+
+  function getListingImages(listing) {
+    if (Array.isArray(listing.images) && listing.images.length) {
+      return listing.images;
+    }
+    if (listing.image) {
+      return [listing.image];
+    }
+    return ["assets/img/listing-placeholder.svg"];
   }
 
   function getAmenityLabels(listing) {
@@ -76,22 +87,36 @@
     return `${formatter.format(value)}$`;
   }
 
-  function renderListing(listing) {
+  function renderListing(listing, index) {
     const badgeClass = listing.status === "للبيع" ? "sale" : "rent";
     const details = getListingDetails(listing);
     const extras = getListingExtras(listing);
     const whatsappNumber = window.WHATSAPP_NUMBER || "96178971332";
     const waText = `يوجد فيديو: ${listing.title}`;
     const waLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(waText)}`;
-    const extraMeta = extras.length ? `<div class=\"meta\">${extras.join(" • ")}</div>` : "";
+    const extraMeta = extras.length ? `<div class="meta">${extras.join(" • ")}</div>` : "";
+    const images = getListingImages(listing);
+    const hasMultipleImages = images.length > 1;
+    const controls = hasMultipleImages
+      ? `
+        <div class="image-controls">
+          <button type="button" data-gallery-action="prev">‹</button>
+          <span class="image-count">1 / ${images.length}</span>
+          <button type="button" data-gallery-action="next">›</button>
+        </div>
+      `
+      : "";
     return `
-      <article class="listing-card" data-reveal>
+      <article class="listing-card" data-reveal data-index="${index}" data-image-index="0" data-image-total="${images.length}">
         <div class="listing-image">
-          <img src="${getListingImage(listing)}" alt="${listing.title}">
+          <img src="${images[0]}" alt="${listing.title}">
+          ${controls}
         </div>
         <div class="listing-body">
-          <div class="listing-area">${listing.area}</div>
-          <span class="badge ${badgeClass}">${listing.status}</span>
+          <div class="listing-head">
+            <div class="listing-area">${listing.area}</div>
+            <span class="badge ${badgeClass}">${listing.status}</span>
+          </div>
           <h3>${listing.title}</h3>
           <div class="price">${formatPrice(listing.price, listing.currency)}</div>
           <div class="meta">${details.join(" • ")}</div>
@@ -110,6 +135,7 @@
     const minValue = Number(document.getElementById("filter-min").value || 0);
     const maxValue = Number(document.getElementById("filter-max").value || 999999999);
     const query = document.getElementById("filter-query").value.trim();
+    const queryText = query.toLowerCase();
 
     const filtered = listingsCache.filter((listing) => {
       if (status && listing.status !== status) return false;
@@ -117,7 +143,11 @@
       if (area && listing.area !== area) return false;
       if (currency && listing.currency !== currency) return false;
       if (listing.price < minValue || listing.price > maxValue) return false;
-      if (query && !listing.title.includes(query)) return false;
+      if (queryText) {
+        const titleText = (listing.title || "").toLowerCase();
+        const areaText = (listing.area || "").toLowerCase();
+        if (!titleText.includes(queryText) && !areaText.includes(queryText)) return false;
+      }
       return true;
     });
 
@@ -127,6 +157,7 @@
   function renderListings(listings) {
     const grid = document.getElementById("listings-grid");
     const empty = document.getElementById("empty-state");
+    currentListings = listings;
     grid.innerHTML = listings.map(renderListing).join("");
     if (!listings.length) {
       empty.style.display = "block";
@@ -169,9 +200,104 @@
     }
   }
 
+  const galleryModal = document.getElementById("gallery-modal");
+  const galleryImage = document.getElementById("gallery-image");
+  const galleryClose = document.getElementById("gallery-close");
+  const galleryPrev = document.getElementById("gallery-prev");
+  const galleryNext = document.getElementById("gallery-next");
+  const galleryCount = document.getElementById("gallery-count");
+  let galleryImages = [];
+  let galleryIndex = 0;
+
+  function updateGallery() {
+    if (!galleryModal || !galleryImage) return;
+    galleryImage.src = galleryImages[galleryIndex];
+    galleryCount.textContent = `${galleryIndex + 1} / ${galleryImages.length}`;
+    galleryPrev.disabled = galleryIndex === 0;
+    galleryNext.disabled = galleryIndex === galleryImages.length - 1;
+  }
+
+  function openGallery(listingIndex) {
+    if (!galleryModal) return;
+    const listing = currentListings[listingIndex];
+    if (!listing) return;
+    galleryImages = getListingImages(listing);
+    galleryIndex = 0;
+    updateGallery();
+    galleryModal.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeGallery() {
+    if (!galleryModal) return;
+    galleryModal.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+
   const applyButton = document.getElementById("apply-filters");
   if (applyButton) {
     applyButton.addEventListener("click", applyFilters);
+  }
+
+  const grid = document.getElementById("listings-grid");
+  if (grid) {
+    grid.addEventListener("click", (event) => {
+      if (!galleryModal) return;
+      const card = event.target.closest(".listing-card");
+      const imageWrap = event.target.closest(".listing-image");
+      const actionButton = event.target.closest("[data-gallery-action]");
+      if (!card || !imageWrap) return;
+      if (actionButton) {
+        event.stopPropagation();
+        const action = actionButton.getAttribute("data-gallery-action");
+        const index = Number(card.getAttribute("data-index"));
+        if (Number.isNaN(index)) return;
+        const listing = currentListings[index];
+        if (!listing) return;
+        const images = getListingImages(listing);
+        const total = images.length;
+        let current = Number(card.getAttribute("data-image-index") || 0);
+        if (action === "next") {
+          current = (current + 1) % total;
+        } else {
+          current = (current - 1 + total) % total;
+        }
+        const img = card.querySelector(".listing-image img");
+        const count = card.querySelector(".image-count");
+        if (img) img.src = images[current];
+        if (count) count.textContent = `${current + 1} / ${total}`;
+        card.setAttribute("data-image-index", String(current));
+        return;
+      }
+      const index = Number(card.getAttribute("data-index"));
+      if (Number.isNaN(index)) return;
+      openGallery(index);
+    });
+  }
+
+  if (galleryClose) {
+    galleryClose.addEventListener("click", closeGallery);
+  }
+  if (galleryModal) {
+    galleryModal.addEventListener("click", (event) => {
+      if (event.target === galleryModal) closeGallery();
+    });
+  }
+  if (galleryPrev) {
+    galleryPrev.addEventListener("click", () => {
+      if (galleryIndex > 0) {
+        galleryIndex -= 1;
+        updateGallery();
+      }
+    });
+  }
+  if (galleryNext) {
+    galleryNext.addEventListener("click", () => {
+      if (galleryIndex < galleryImages.length - 1) {
+        galleryIndex += 1;
+        updateGallery();
+      }
+    });
   }
 
   document.addEventListener("DOMContentLoaded", initListings);
